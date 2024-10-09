@@ -4,6 +4,7 @@ import { PostItem } from "@/components/post-item";
 // import { Tag } from "@/components/tag";
 // import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 // import { getAllTags, sortPosts, sortTagsByCount } from "@/lib/utils";
+import { sortPosts } from "@/lib/utils";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -23,14 +24,15 @@ console.log("posts");
 
 export default async function BlogPage({}: BlogPageProps) {
 //   const currentPage = Number(searchParams?.page) || 1;
-//   const sortedPosts = sortPosts(posts.filter((post) => post.published));
+const sortedPosts = sortPosts(posts);
+const displayPosts = sortedPosts;
 //   const totalPages = Math.ceil(sortedPosts.length / POSTS_PER_PAGE);
 
 //   const displayPosts = sortedPosts.slice(
 //     POSTS_PER_PAGE * (currentPage - 1),
 //     POSTS_PER_PAGE * currentPage
 //   );
-  const displayPosts = posts;
+
 
 //   const tags = getAllTags(posts);
 //   const sortedTags = sortTagsByCount(tags);
