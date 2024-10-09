@@ -1,6 +1,6 @@
 import { posts } from "#site/content";
 import { PostItem } from "@/components/post-item";
-// import { QueryPagination } from "@/components/query-pagination";
+import { QueryPagination } from "@/components/query-pagination";
 // import { Tag } from "@/components/tag";
 // import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 // import { getAllTags, sortPosts, sortTagsByCount } from "@/lib/utils";
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: "This is a description",
 };
 
-// const POSTS_PER_PAGE = 5;
+const POSTS_PER_PAGE = 5;
 
 interface BlogPageProps {
   searchParams: {
@@ -22,16 +22,15 @@ interface BlogPageProps {
 
 console.log("posts");
 
-export default async function BlogPage({}: BlogPageProps) {
-//   const currentPage = Number(searchParams?.page) || 1;
-const sortedPosts = sortPosts(posts);
-const displayPosts = sortedPosts;
-//   const totalPages = Math.ceil(sortedPosts.length / POSTS_PER_PAGE);
+export default async function BlogPage({ searchParams }: BlogPageProps) {
+  const currentPage = Number(searchParams?.page) || 1;
+  const sortedPosts = sortPosts(posts);
+  const totalPages = Math.ceil(sortedPosts.length / POSTS_PER_PAGE);
 
-//   const displayPosts = sortedPosts.slice(
-//     POSTS_PER_PAGE * (currentPage - 1),
-//     POSTS_PER_PAGE * currentPage
-//   );
+  const displayPosts = sortedPosts.slice(
+    POSTS_PER_PAGE * (currentPage - 1),
+    POSTS_PER_PAGE * currentPage
+  );
 
 
 //   const tags = getAllTags(posts);
@@ -69,10 +68,10 @@ const displayPosts = sortedPosts;
           ) : (
             <p>Nothing to see here yet</p>
           )}
-          {/* <QueryPagination
+          <QueryPagination
             totalPages={totalPages}
             className="justify-end mt-4"
-          /> */}
+          />
         </div>
         {/* <Card className="col-span-12 row-start-3 h-fit sm:col-span-4 sm:col-start-9 sm:row-start-1">
           <CardHeader>
