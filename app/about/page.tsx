@@ -31,11 +31,20 @@ export default async function AboutPage() {
             Software Developer
           </p>
         </div>
-        <p className="text-muted-foreground text-lg py-4">
-            Software Developer in Tokyo.
-            Interested in all things web & mobile development.
-            Also interested in generative art.
-        </p>
+        <div>
+          <p className="text-muted-foreground text-lg py-4">
+            東京在住のソフトウェアエンジニアのブログです。
+            業務ではネイティブアプリ、Web開発をしています。
+            他には筋トレ、バスケボディーワーク、映画・映像に興味があります。
+          </p>
+          <p className="text-muted-foreground text-lg py-4">
+            Software Developer in Tokyo. I build native apps and web apps at work.
+            I like weight training , body work such as Pilates, basketball, and movies.
+          </p>
+          <p className="text-muted-foreground text-lg py-4">
+            React Native, Next.js, TypeScript, TailwindCSS, Shadcn/ui, Velite
+          </p>
+        </div>
       </div>
     </div>
   );

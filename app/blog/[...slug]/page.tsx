@@ -6,6 +6,7 @@ import "@/styles/mdx.css";
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { Tag } from "@/components/tag";
+import { formatDate } from "@/lib/utils";
 interface PostPageProps {
   params: {
     slug: string[];
@@ -74,7 +75,8 @@ export default async function PostPage({ params }: PostPageProps) {
   return (
     <article className="container py-6 prose dark:prose-invert max-w-3xl mx-auto">
       <h1 className="mb-2">{post.title}</h1>
-      <div className="flex gap-2 mb-2">
+      <time dateTime={post.date}>{formatDate(post.date)}</time>
+      <div className="flex gap-2 mb-2 pt-2">
         {post.tags?.map((tag) => (
           <Tag tag={tag} key={tag} />
         ))}
