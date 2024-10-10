@@ -1,15 +1,14 @@
 import { posts } from "#site/content";
 import { PostItem } from "@/components/post-item";
 import { QueryPagination } from "@/components/query-pagination";
-// import { Tag } from "@/components/tag";
-// import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-// import { getAllTags, sortPosts, sortTagsByCount } from "@/lib/utils";
-import { sortPosts } from "@/lib/utils";
+import { Tag } from "@/components/tag";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { getAllTags, sortPosts, sortTagsByCount } from "@/lib/utils";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "My blog",
-  description: "This is a description",
+  title: "tofujlg's blog | blog list",
+  description: "tofujlg's blog list",
 };
 
 const POSTS_PER_PAGE = 5;
@@ -19,8 +18,6 @@ interface BlogPageProps {
     page?: string;
   };
 }
-
-console.log("posts");
 
 export default async function BlogPage({ searchParams }: BlogPageProps) {
   const currentPage = Number(searchParams?.page) || 1;
@@ -33,16 +30,16 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   );
 
 
-//   const tags = getAllTags(posts);
-//   const sortedTags = sortTagsByCount(tags);
+  const tags = getAllTags(posts);
+  const sortedTags = sortTagsByCount(tags);
 
   return (
     <div className="container max-w-4xl py-6 lg:py-10">
       <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
         <div className="flex-1 space-y-4">
-          <h1 className="inline-block font-black text-4xl lg:text-5xl">Blog</h1>
+          <h1 className="inline-block font-black text-3xl lg:text-4xl">Blog</h1>
           <p className="text-xl text-muted-foreground">
-            My ramblings on all things web dev.
+            All posts
           </p>
         </div>
       </div>
@@ -73,7 +70,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             className="justify-end mt-4"
           />
         </div>
-        {/* <Card className="col-span-12 row-start-3 h-fit sm:col-span-4 sm:col-start-9 sm:row-start-1">
+        <Card className="col-span-12 row-start-3 h-fit sm:col-span-4 sm:col-start-9 sm:row-start-1">
           <CardHeader>
             <CardTitle>Tags</CardTitle>
           </CardHeader>
@@ -82,7 +79,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
               <Tag tag={tag} key={tag} count={tags[tag]} />
             ))}
           </CardContent>
-        </Card> */}
+        </Card>
       </div>
     </div>
   );
