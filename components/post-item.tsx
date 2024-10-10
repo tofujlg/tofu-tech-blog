@@ -36,8 +36,8 @@ export function PostItem({
         <dl>
           <dt className="sr-only">Published On</dt>
           <dd className="text-sm sm:text-base font-medium flex items-center gap-1">
-            <Calendar className="h-4 w-4" />
-            <time dateTime={date}>{formatDate(date)}</time>
+            <Calendar className="h-4 w-4 text-muted-foreground" />
+            <time className="text-muted-foreground" dateTime={date}>{formatDate(date)}</time>
           </dd>
         </dl>
         {/* <Link

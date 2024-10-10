@@ -12,7 +12,7 @@ export default function Home() {
       <section className="pt-6 md:pb-12 md:mt-10 ">
         <div className="container flex flex-col gap-4 text-center">
           <p className="max-w-[42rem] mx-auto text-muted-foreground sm:text-xl text-balance">
-            Welcome to tofujlg&apos;s tech blog.
+            Hi. Welcome to tofujlg&apos;s blog.
           </p>
         </div>
       </section>

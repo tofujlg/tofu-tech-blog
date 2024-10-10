@@ -1,6 +1,7 @@
 import { posts } from "#site/content";
 import { MDXContent } from "@/components/mdx-components";
 import { notFound } from "next/navigation";
+import { Calendar } from "lucide-react";
 
 import "@/styles/mdx.css";
 import { Metadata } from "next";
@@ -75,7 +76,10 @@ export default async function PostPage({ params }: PostPageProps) {
   return (
     <article className="container py-6 prose dark:prose-invert max-w-3xl mx-auto">
       <h1 className="mb-2">{post.title}</h1>
-      <time dateTime={post.date}>{formatDate(post.date)}</time>
+      <div className="text-sm sm:text-base font-medium flex items-center gap-1" >
+        <Calendar className="h-4 w-4" />
+        <time dateTime={post.date}>{formatDate(post.date)}</time>
+      </div>
       <div className="flex gap-2 mb-2 pt-2">
         {post.tags?.map((tag) => (
           <Tag tag={tag} key={tag} />
