@@ -4,7 +4,7 @@ export const siteConfig = {
     description: "A beautiful tofujlg's blog",
     author: "tofujlg",
     links: {
-        twitter: "https://twitter.com/tofujlg",
+        twitter: "https://twitter.com/jujekebab",
         github: "https://github.com/tofujlg",
     }
 }
