@@ -11,6 +11,8 @@ yarn dev
 - [x] Add tag feature
 - [x] Fix rehype syntax highlighting
 - [ ] Add view by year feature
+- [ ] Add filter by language feature
+- [ ] Add portfolio page
 
 ## Descriptions
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
