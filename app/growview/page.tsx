@@ -18,42 +18,82 @@ export default async function AboutPage() {
         </div>
       </div>
       <hr className="my-8" />
-      <p>Privacy Policy
+      
+      <div className="prose prose-slate max-w-none">
+        <h2 className="text-3xl font-bold mb-6">Privacy Policy</h2>
+        <p className="text-sm text-muted-foreground mb-6">Last Updated: 2024/10/30</p>
 
-Last Updated: [2024/10/30]
+        <section className="mb-8">
+          <h3 className="text-2xl font-semibold mb-4">1. Introduction</h3>
+          <p className="mb-4">
+            This Privacy Policy explains how our application (&quot;growview&quot;) handles your information. 
+            We are committed to protecting your privacy and ensuring transparency about our data practices.
+          </p>
+        </section>
 
-1. Introduction
-This Privacy Policy explains how our application (&quot;growview&quot;) handles your information. We are committed to protecting your privacy and ensuring transparency about our data practices.
+        <section className="mb-8">
+          <h3 className="text-2xl font-semibold mb-4">2. Data Collection and Storage</h3>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Our App does not collect any personal information from its users</li>
+            <li>We do not track, store, or transmit any user data to external servers</li>
+            <li>All data generated during the use of the App is stored locally on your device</li>
+            <li>We do not use cookies or similar tracking technologies</li>
+          </ul>
+        </section>
 
-2. Data Collection and Storage
-- Our App does not collect any personal information from its users
-- We do not track, store, or transmit any user data to external servers
-- All data generated during the use of the App is stored locally on your device
-- We do not use cookies or similar tracking technologies
+        <section className="mb-8">
+          <h3 className="text-2xl font-semibold mb-4">3. Local Storage</h3>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Any information or settings created while using the App remains exclusively on your device</li>
+            <li>You maintain full control over any locally stored data</li>
+            <li>You can delete all App data at any time by uninstalling the App</li>
+          </ul>
+        </section>
 
-3. Local Storage
-- Any information or settings created while using the App remains exclusively on your device
-- You maintain full control over any locally stored data
-- You can delete all App data at any time by uninstalling the App
+        <section className="mb-8">
+          <h3 className="text-2xl font-semibold mb-4">4. Third-Party Services</h3>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Our App does not integrate with any third-party services</li>
+            <li>We do not share any information with third parties</li>
+          </ul>
+        </section>
 
-4. Third-Party Services
-- Our App does not integrate with any third-party services
-- We do not share any information with third parties
+        <section className="mb-8">
+          <h3 className="text-2xl font-semibold mb-4">5. Data Security</h3>
+          <p className="mb-4">
+            While we don&apos;t collect any data, we recommend users:
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Keep their device&apos;s operating system updated</li>
+              <li>Use device-level security features (such as screen lock)</li>
+              <li>Regularly backup their device data</li>
+            </ul>
+          </p>
+        </section>
 
-5. Data Security
-While we don&apos;t collect any data, we recommend users:
-- Keep their device&apos;s operating system updated
-- Use device-level security features (such as screen lock)
-- Regularly backup their device data
+        <section className="mb-8">
+          <h3 className="text-2xl font-semibold mb-4">6. Children&apos;s Privacy</h3>
+          <p className="mb-4">
+            Our App is designed to be safe for users of all ages as it does not collect, store, or transmit any personal information.
+          </p>
+        </section>
 
-6. Children&apos;s Privacy
-Our App is designed to be safe for users of all ages as it does not collect, store, or transmit any personal information.
+        <section className="mb-8">
+          <h3 className="text-2xl font-semibold mb-4">7. Changes to Privacy Policy</h3>
+          <p className="mb-4">
+            We reserve the right to update this Privacy Policy. Any changes will be effective immediately upon posting the updated version.
+          </p>
+        </section>
 
-7. Changes to Privacy Policy
-We reserve the right to update this Privacy Policy. Any changes will be effective immediately upon posting the updated version.
-
-8. Contact Us
-If you have any questions about this Privacy Policy, please contact us at [Your Contact Information].</p>
+        <section className="mb-8">
+          <h3 className="text-2xl font-semibold mb-4">8. Contact Us</h3>
+          <p>
+            If you have any questions about this Privacy Policy, please contact us at{" "}
+            <a href="https://x.com/jujekebab" className="text-blue-600 hover:underline">
+              x.com/jujekebab
+            </a>
+          </p>
+        </section>
+      </div>
     </div>
   );
 }
