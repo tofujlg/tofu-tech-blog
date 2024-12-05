@@ -18,8 +18,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "tofujlg's blog",
-  description: "tofujlg's blog",
+  title: `${siteConfig.name}`,
+  description: `${siteConfig.description}`,
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? siteConfig.url),
 };
 

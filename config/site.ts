@@ -1,8 +1,8 @@
 export const siteConfig = {
-    name: "tofujlg's blog",
+    name: "jujekebab",
     url: "https://jujekebab.com",
-    description: "A beautiful tofujlg's blog",
-    author: "tofujlg",
+    description: "jujekebab's website and blog",
+    author: "jujekebab",
     links: {
         twitter: "https://twitter.com/jujekebab",
         github: "https://github.com/tofujlg",

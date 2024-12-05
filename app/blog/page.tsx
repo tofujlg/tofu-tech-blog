@@ -5,13 +5,14 @@ import { Tag } from "@/components/tag";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getAllTags, sortPosts, sortTagsByCount } from "@/lib/utils";
 import { Metadata } from "next";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "tofujlg's blog | blog list",
-  description: "tofujlg's blog list",
+  title: `${siteConfig.name} | blog list`,
+  description: `${siteConfig.description}`,
 };
 
-const POSTS_PER_PAGE = 5;
+const POSTS_PER_PAGE = 12;
 
 interface BlogPageProps {
   searchParams: {
