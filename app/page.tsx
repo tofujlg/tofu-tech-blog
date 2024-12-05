@@ -10,11 +10,6 @@ export default function Home() {
   return (
     <>
       <section className="pt-6 pb-6 md:pb-12 md:mt-10 ">
-        <div className="container flex flex-col gap-4 text-center">
-          <p className="max-w-[42rem] mx-auto text-muted-foreground sm:text-xl text-balance">
-            Hi. Welcome to tofujlg&apos;s blog.
-          </p>
-        </div>
       </section>
       <section className="container max-w-4xl flex flex-col">
         {/* <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-center">
@@ -22,7 +17,7 @@ export default function Home() {
         </h2> */}
         <ul className="flex flex-col">
           {latestPosts.map((post) => (
-              <li key={post.slug} className="first:border-t first:border-border">
+              <li key={post.slug} className="first:border-t">
                 <PostItem
                   slug={post.slug}
                   title={post.title}
