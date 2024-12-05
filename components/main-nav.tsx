@@ -31,6 +31,15 @@ export function MainNav() {
       >
         About
       </Link>
+      <Link
+        href="/works"
+        className={cn(
+          "text-sm font-medium transition-colors hover:text-primary hidden sm:inline-block",
+          pathname === "/works" ? "text-foreground" : "text-foreground/60"
+        )}
+      >
+        Works
+      </Link>
     </nav>
   );
 }
