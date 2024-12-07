@@ -46,7 +46,7 @@ export function QueryPagination({
           .fill("")
           .map((_, index) => (
             <PaginationItem
-              className="hidden sm:inline-block"
+              className="inline-block"
               key={`page-button-${index}`}
             >
               <PaginationLink
