@@ -6,7 +6,6 @@ import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/navigation";
-import { Icons } from "./icons";
 import { siteConfig } from "@/config/site";
 
 export function MobileNav() {
@@ -26,7 +25,6 @@ export function MobileNav() {
           href="/"
           className="flex items-center"
         >
-          <Icons.logo className="mr-2 h-4 w-4" />
           <span className="font-bold">{siteConfig.name}</span>
         </MobileLink>
         <div className="flex flex-col gap-3 mt-3">
@@ -36,8 +34,16 @@ export function MobileNav() {
           <MobileLink onOpenChange={setOpen} href="/about">
             About
           </MobileLink>
+          <MobileLink onOpenChange={setOpen} href="/works">
+            Works
+          </MobileLink>
+          <div className="h-px bg-border" />
+          <h3 className="font-bold">Links</h3>
           <Link target="_blank" rel="noreferrer" href={siteConfig.links.github}>
             GitHub
+          </Link>
+          <Link target="_blank" rel="noreferrer" href={siteConfig.links.blusky}>
+            Bluesky
           </Link>
           <Link
             target="_blank"

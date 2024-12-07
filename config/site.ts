@@ -6,6 +6,7 @@ export const siteConfig = {
     links: {
         twitter: "https://twitter.com/jujekebab",
         github: "https://github.com/tofujlg",
+        blusky: "https://bsky.app/profile/tofujlg.bsky.social",
     }
 }
 
