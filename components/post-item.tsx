@@ -1,8 +1,5 @@
-import { Calendar } from "lucide-react";
 import Link from "next/link";
-// import { buttonVariants } from "./ui/button";
 import { formatDate } from "@/lib/utils";
-// import { Tag } from "./tag";
 
 interface PostItemProps {
   slug: string;
@@ -15,9 +12,7 @@ interface PostItemProps {
 export function PostItem({
   slug,
   title,
-  // description,
   date,
-  //   tags,
 }: PostItemProps) {
   return (
     <article className="flex flex-col gap-2 border-border border-b py-3">
@@ -36,7 +31,7 @@ export function PostItem({
         <dl>
           <dt className="sr-only">Published On</dt>
           <dd className="text-sm sm:text-base font-medium flex items-center gap-1">
-            <Calendar className="h-4 w-4 text-muted-foreground" />
+            {/* <Calendar className="h-4 w-4 text-muted-foreground" /> */}
             <time className="text-muted-foreground" dateTime={date}>{formatDate(date)}</time>
           </dd>
         </dl>
