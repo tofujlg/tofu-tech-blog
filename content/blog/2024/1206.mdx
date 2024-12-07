@@ -1,0 +1,42 @@
+---
+title: "[Mac] Javaのバージョンを簡単に切り替える"
+date: "2024-12-06"
+tags: ["Mac", "Java"]
+lang: "ja"
+published: false
+---
+
+## TODO
+- Write medium
+- Write Zenn
+
+## Main
+
+Javaのバージョンを簡単に切り替える方法を紹介します。
+
+```bash
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+```
+
+デフォルトで使用したいバージョンのパスは、`.zshrc`や`.bashrc`に追加します。
+
+たまに、あるプロジェクトでは違うバージョンを使用したいということがあると思います。そういった時には、以下のコマンドを実行します。
+
+```bash
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
+```
+
+これで、プロジェクトごとに異なるバージョンを使用することができます。
+少し不便なのは、ターミナルを再起動すると、デフォルトのバージョンに戻ってしまうことです。
+
+そこで役に立つのが、`zsh`のプラグインです。
+
+`auto-complete`というプラグインを使うと、ターミナルの補完が楽になります。
+
+`ex`とタイプし始めると、`export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home`という提案が出てきますので後は`→`を押してEnterすれば良いだけです。
+
+
+！「じふ
+
+バージョンを変えるのも、1秒ぐらいですむので、この方法でストレスを感じることはあまりないと思います。
+
