@@ -2,8 +2,9 @@ import { posts } from "#site/content";
 import { PostItem } from "@/components/post-item";
 import { QueryPagination } from "@/components/query-pagination";
 import { Tag } from "@/components/tag";
+import { Language } from "@/components/languages";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { getAllTags, sortPosts, sortTagsByCount } from "@/lib/utils";
+import { getAllLangs, getAllTags, sortLangsByCount, sortPosts, sortTagsByCount } from "@/lib/utils";
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 
@@ -32,7 +33,9 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
 
 
   const tags = getAllTags(posts);
+  const langs = getAllLangs(posts);
   const sortedTags = sortTagsByCount(tags);
+  const sortedLangs = sortLangsByCount(langs);
 
   return (
     <div className="container max-w-4xl py-6 lg:py-10">
@@ -45,7 +48,8 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         </div>
       </div>
       <div className="grid grid-cols-12 gap-3 mt-8">
-        <div className="col-span-12 col-start-1 sm:col-span-8">
+        <div className="col-span-12 ">
+        {/* <div className="sm:col-span-12"> */}
           <hr />
           {displayPosts?.length > 0 ? (
             <ul className="flex flex-col">
@@ -68,9 +72,10 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           )}
           <QueryPagination
             totalPages={totalPages}
-            className="justify-end mt-4"
+            className="justify-center mt-4"
           />
         </div>
+        <div className="col-span-12 row-start-2">
         <Card className="col-span-12 row-start-3 h-fit sm:col-span-4 sm:col-start-9 sm:row-start-1">
           <CardHeader>
             <CardTitle>Tags</CardTitle>
@@ -81,6 +86,17 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             ))}
           </CardContent>
         </Card>
+        <Card className="col-span-12 row-start-3 h-fit sm:col-span-4 sm:col-start-9 sm:row-start-1 mt-9">
+          <CardHeader>
+            <CardTitle>Languages</CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-wrap gap-2">
+            {sortedLangs?.map((lang) => (
+              <Language lang={lang} key={lang} count={langs[lang]} />
+            ))}
+          </CardContent>
+        </Card>
+        </div>
       </div>
     </div>
   );
