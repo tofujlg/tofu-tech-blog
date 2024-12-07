@@ -1,5 +1,6 @@
 import { siteConfig } from "@/config/site";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: `${siteConfig.name} | works`,
@@ -20,19 +21,40 @@ export default async function WorksPage() {
       <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
       <section>
         <h2 className="text-2xl font-bold">growview</h2>
-        <p>2024</p>
-        <p>React Native, Expo, TypeScript, NativeWind</p>
-        <p>
-          React Native で筋トレ記録アプリを作成しました。
-        </p>
-        {/* <div className="flex gap-4">
+        <Image
+          className="mt-4"
+          src="/growview_icon.png"
+          alt="growview"
+          width={100}
+          height={100}
+        />
+        <div className="mt-4">
+        <p className="text-sm text-muted-foreground">2024</p>
+          <p>React Native製の筋トレ記録アプリ。日々のトレーニングを記録し、成果を動画で出力することが可能。</p>
+          <p className="text-sm text-muted-foreground mt-3">Platforms :</p>
+          <p>iOS, Android</p>
+          <p className="text-sm text-muted-foreground mt-3">Tech stack :</p>
+          <p>React Native, Expo, TypeScript, NativeWind, React-Native-Reanimated, FFMpeg</p>
+          {/* <div className="flex gap-4">
         <a href="https://astro-growview.netlify.app/">Official Site</a>
         </div> */}
-        <div className="flex gap-4">
-          <a href="https://apps.apple.com/us/app/growview/id6737449909">App Store</a>
+          <div className="mt-4">
+          <p className="text-sm text-muted-foreground">Download :</p>
+          <div className="flex gap-4">
+            <p>iOS :</p>
+            <a
+              className="underline"
+              target="_blank"
+              rel="noreferrer"
+              href="https://apps.apple.com/us/app/growview/id6737449909"
+              >
+              App Store
+            </a>
+          </div>
+          <p>Android : <span className="text-muted-foreground">Coming Soon</span></p>
         </div>
-      </section>
-
+          </div>
+        </section>
       </div>
     </div>
   );
