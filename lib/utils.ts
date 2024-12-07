@@ -17,7 +17,7 @@ export function formatDate(input: string | number): string {
 }
 
 export function sortPosts(posts: Array<Post>) {
-  return posts.sort((a, b) => {
+  return posts.filter(post => post.published !== false).sort((a, b) => {
     if (a.date > b.date) return -1;
     if (a.date < b.date) return 1;
     return 0;
