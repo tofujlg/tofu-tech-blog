@@ -26,7 +26,7 @@ export function sortPosts(posts: Array<Post>) {
 
 export function getAllTags(posts: Array<Post>) {
   const tags: Record<string, number> = {}
-  posts.forEach(post => {
+  posts.filter(post => post.published !== false).forEach(post => {
     if (post.tags) {
       post.tags?.forEach(tag => {
         tags[tag] = (tags[tag] ?? 0) + 1;
@@ -38,7 +38,7 @@ export function getAllTags(posts: Array<Post>) {
 
 export function getAllLangs(posts: Array<Post>) {
   const langs: Record<string, number> = {}
-  posts.forEach(post => {
+  posts.filter(post => post.published !== false).forEach(post => {
     if (post.lang) {
       langs[post.lang] = (langs[post.lang] ?? 0) + 1;
     }

@@ -35,7 +35,7 @@ export default function LangPage({ params }: LangPageProps) {
   // const title = lang.split("-").join(" ");
 
   const allPosts = getPostsByLangSlug(posts, lang);
-  const displayPosts = allPosts
+  const displayPosts = allPosts.filter(post => post.published !== false)
   const langs = getAllLangs(posts);
   const sortedLangs = sortLangsByCount(langs);
 

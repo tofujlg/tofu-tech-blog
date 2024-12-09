@@ -8,11 +8,13 @@ yarn dev
 ```
 
 ## Todos
+- [ ] Add analytics
+
+## Dones
 - [x] Add tag feature
 - [x] Fix rehype syntax highlighting
-- [ ] Add view by year feature
-- [ ] Add filter by language feature
-- [ ] Add portfolio page
+- [x] Add filter by language feature
+- [x] Add portfolio page
 
 ## Descriptions
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
