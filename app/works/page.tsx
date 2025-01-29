@@ -51,7 +51,17 @@ export default async function WorksPage() {
               App Store
             </a>
           </div>
-          <p>Android : <span className="text-muted-foreground">Coming Soon</span></p>
+          <div className="flex gap-4">
+            <p>Android :</p>
+            <a
+              className="underline"
+              target="_blank"
+              rel="noreferrer"
+              href="https://play.google.com/store/apps/details?id=com.jujekebab.growview"
+              >
+              Play Store
+            </a>
+          </div>
         </div>
           </div>
         </section>
