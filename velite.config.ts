@@ -21,6 +21,7 @@ const posts = defineCollection({
       lang: s.string().optional(),
       published: s.boolean().optional(),
       body: s.mdx(),
+      rawBody: s.markdown(), 
     })
     .transform(computedFields),
 });

@@ -22,7 +22,7 @@ export async function GET() {
       description: post.description || "",
       custom_elements: [
         {
-          "content:encoded": post.body || "",
+          "content:encoded": post.rawBody|| "",
         },
       ],
     });
