@@ -37,7 +37,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-pt-[3.5rem]">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <head>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="RSS Feed for Site"
+          href="/feed"
+        />
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <Providers>
           <div className="relative flex min-h-dvh flex-col bg-background">
             <SiteHeader />

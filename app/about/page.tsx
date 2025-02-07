@@ -45,6 +45,31 @@ export default async function AboutPage() {
           </p>
         </div>
       </div>
+      <hr className="my-8" />
+      <div className="flex flex-col gap-4 justify-center sm:flex-row">
+        <a
+          href="/feed"
+          className="text-muted-foreground hover:text-foreground flex items-center gap-2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="h-5 w-5"
+          >
+            <path d="M4 11a9 9 0 0 1 9 9" />
+            <path d="M4 4a16 16 0 0 1 16 16" />
+            <circle cx="5" cy="19" r="1" />
+          </svg>
+          RSS Feed
+        </a>
+      </div>
     </div>
   );
 }
