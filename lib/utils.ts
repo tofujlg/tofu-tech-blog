@@ -69,3 +69,11 @@ export function getPostsByLangSlug(posts: Array<Post>, lang: string) {
     return slug(post.lang) === lang
   })
 }
+
+export function getFeedPosts(posts: Array<Post>) {
+  return posts.filter(post => post.published !== false).sort((a, b) => {
+    if (a.date > b.date) return -1;
+    if (a.date < b.date) return 1;
+    return 0;
+  });
+}
