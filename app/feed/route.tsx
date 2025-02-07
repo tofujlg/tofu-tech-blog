@@ -20,6 +20,11 @@ export async function GET() {
       url: `${siteConfig.url}/${post.slug}`,
       date: post.date,
       description: post.description || "",
+      custom_elements: [
+        {
+          "content:encoded": post.body || "",
+        },
+      ],
     });
   });
 
