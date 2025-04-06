@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "This page is used to show Growview Plivacy policy",
 };
 
-export default async function AboutPage() {
+export default async function GrowviewPrivacyPolicyPage() {
   return (
     <div className="container max-w-6xl py-6 lg:py-10">
       <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
@@ -19,7 +19,7 @@ export default async function AboutPage() {
       </div>
       <hr className="my-8" />
       
-      <div className="prose prose-slate max-w-none">
+      <div className="prose prose-slate dark:prose-invert max-w-none text-lg">
         <h2 className="text-3xl font-bold mb-6">Privacy Policy</h2>
         <p className="text-sm text-muted-foreground mb-6">Last Updated: 2024/10/30</p>
 
@@ -62,12 +62,12 @@ export default async function AboutPage() {
           <h3 className="text-2xl font-semibold mb-4">5. Data Security</h3>
           <p className="mb-4">
             While we don&apos;t collect any data, we recommend users:
+          </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Keep their device&apos;s operating system updated</li>
               <li>Use device-level security features (such as screen lock)</li>
               <li>Regularly backup their device data</li>
             </ul>
-          </p>
         </section>
 
         <section className="mb-8">
